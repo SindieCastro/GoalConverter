@@ -23,12 +23,14 @@ function generateGoal(input, timeframe) {
   var text = input.toLowerCase();
 
   if (text.includes("increase")) {
-    return "✅ " + input + "' by 15–25% over " + timeframe + " days";
+    return "✅ Increase " + input + " by 15–25% within " + timeframe + " days using weekly performance tracking";
   }
 
-  if (text.includes("decrease") || text.includes("reduce")) {
-    return "✅ " + input + "' by 10–20% over " + timeframe + " days";
-  }
+ 
+if (text.includes("decrease") || text.includes("reduce")) {
+  return "✅ Reduce " + input + " by 10–20% over " + timeframe + " days";
+}
+
   
  if (text.includes("exercise") || text.includes("fitness")) {
     return "✅ Perform 4 workouts per week for " + timeframe + " days";
