@@ -1,8 +1,4 @@
-console.log("JS LOADED");
-
-function convertGoal() {function convert("timeframe").value;
-
-  if (!input) {
+console.log("JS LOADED ✅");console.log {
     alert("Please enter a goal");
     return;
   }
@@ -10,19 +6,19 @@ function convertGoal() {function convert("timeframe").value;
   let resultText = "";
 
   if (input.toLowerCase().includes("eat")) {
-    resultText = `Eat no more than 2,000 calories per day for ${timeframe} days and track meals daily`;
+    resultText = `✅ Eat no more than 2,000 calories per day for ${timeframe} days and track meals daily`;
   }
   else if (input.toLowerCase().includes("money") || input.toLowerCase().includes("earn")) {
-    resultText = `Earn $1,000 per month for the next ${timeframe} days and track income weekly`;
+    resultText = `✅ Earn $1,000 per month for ${timeframe} days and track income weekly`;
   }
   else if (input.toLowerCase().includes("study") || input.toLowerCase().includes("learn")) {
-    resultText = `Study for 1 hour daily and complete 5 lessons per week for ${timeframe} days`;
+    resultText = `✅ Study for 1 hour daily and complete 5 lessons per week for ${timeframe} days`;
   }
   else if (input.toLowerCase().includes("exercise") || input.toLowerCase().includes("fitness")) {
-    resultText = `Exercise 4 times per week for 30 minutes for ${timeframe} days`;
+    resultText = `✅ Exercise 4 times per week for 30 minutes for ${timeframe} days`;
   }
   else {
-    resultText = `Break "${input}" into weekly measurable targets and complete within ${timeframe} days`;
+    resultText = `✅ Break "${input}" into weekly measurable targets and complete within ${timeframe} days`;
   }
 
   document.getElementById("result").innerText = resultText;
@@ -33,10 +29,6 @@ function convertGoal() {function convert("timeframe").value;
 
   displayGoals();
 }
-  console.log("Button clicked");
-
-  const input = document.getElementById("goalInput").value;
-
 
 function displayGoals() {
   const list = document.getElementById("savedGoals");
@@ -52,3 +44,11 @@ function displayGoals() {
 }
 
 window.onload = displayGoals;
+``
+
+function convertGoal() {
+  console.log("Button clicked");
+
+  const input = document.getElementById("goalInput").value;
+  const timeframe = document.getElementById("timeframe").value;
+
