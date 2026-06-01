@@ -1,5 +1,24 @@
+console.log("JS LOADED ✅");
 
-console.log("JS LOADED ");console.log("JS  displayGoals();
+function convertGoal() {
+  console.log("Button clicked ✅");
+
+  const input = document.getElementById("goalInput").value;
+
+  if (!input) {
+    alert("Please enter a goal");
+    return;
+  }
+
+  const resultText = `✅ ${input} — Track it weekly and complete in 30 days`;
+
+  document.getElementById("result").innerText = resultText;
+
+  let goals = JSON.parse(localStorage.getItem("goals")) || [];
+  goals.push(resultText);
+  localStorage.setItem("goals", JSON.stringify(goals));
+
+  displayGoals();
 }
 
 function displayGoals() {
@@ -16,24 +35,3 @@ function displayGoals() {
 }
 
 window.onload = displayGoals;
-
-function convertGoal() {
-  console.log("Button clicked");
-
-  const input = document.getElementById("goalInput").value;
-
-  if (!input) {
-    alert("Please enter a goal");
-    return;
-  }
-
-  const resultText = ` ${input} — Track it weekly and complete in 30 days`;
-
-  document.getElementById("result").innerText = resultText;
-
-  let goals = JSON.parse(localStorage.getItem("goals")) || [];
-  goals.push(resultText);
-  localStorage.setItem("goals", JSON.stringify(goals));
-
-
-
