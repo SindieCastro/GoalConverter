@@ -21,6 +21,15 @@ function generateGoal(input, timeframe) {function generateGoal(input, timeframe)
 
   if (text.includes("exercise") || text.includes("fitness")) {
     return `✅ Perform 4 structured workouts per week and track performance metrics for ${timeframe} days`;
+
+if (text.includes("increase")) {
+  return "✅ Increase performance of '" + input + "' by 15–25% over " + timeframe + " days by tracking progress weekly and executing targeted actions";
+}
+
+if (text.includes("decrease") || text.includes("reduce")) {
+  return "✅ Reduce '" + input + "' by 10–20% over " + timeframe + " days by monitoring metrics weekly and implementing control measures";
+}
+
   }
 
   return `✅ Define a measurable KPI for "${input}" and track progress weekly over ${timeframe} days`;
