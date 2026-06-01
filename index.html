@@ -1,37 +1,38 @@
 
-<!DOCTYPE html><!DOCTYPE lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Sindie Academy's Goal Converter</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Goal Converter</title>
+
+  <!-- ✅ Correct CSS link -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <div class="container">
-    <h1>🎯 Sindie Academy's Goal Converter</h1>
+<div class="container">
+  <h1>🎯 Goal Converter</h1>
 
-    <!-- INPUT SECTION -->
-    <div class="card">
-      <h2>Enter Your Goal</h2>
-      <input id="goalInput" placeholder="e.g. I want to get fit" />
-      <button onclick="convertGoal()">Convert Goal</button>
-    </div>
-
-    <!-- OUTPUT SECTION -->
-    <div class="card">
-      <h2>Measurable Goal</h2>
-      <p id="result"></p>
-    </div>
-
-    <!-- SAVED GOALS -->
-    <div class="card">
-      <h2>Saved Goals</h2>
-      <ul id="savedGoals"></ul>
-    </div>
+  <div class="card">
+    <h2>Enter Your Goal</h2>
+    <input id="goalInput" placeholder="Enter a goal">
+    <button onclick="convertGoal()">Convert Goal</button>
   </div>
 
-  <script src="script.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <div class="card">
+    <h2>Result</h2>
+    <p id="result">Your result will appear here</p>
+  </div>
+
+  <div class="card">
+    <h2>Saved Goals</h2>
+    <ul id="savedGoals"></ul>
+  </div>
+</div>
+
+<!-- ✅ Correct JS link -->
+<script src="script.js"></script>
+
 </body>
 </html>
-
+``
