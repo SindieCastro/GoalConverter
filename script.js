@@ -1,5 +1,4 @@
 console.log("JS LOADED");
-
 // MAIN FUNCTION
 function convertGoal() {
   try {
