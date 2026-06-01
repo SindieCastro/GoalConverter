@@ -10,7 +10,24 @@ function convertGoal() {
     return;
   }
 
-  const resultText = `${input} — Track it weekly and complete in 30 days`;
+  
+let resultText = "";
+
+if (input.toLowerCase().✅ Eat no more than 2,000 calories per day and track meals daily for 30 days`;if (input.toLowerCase().includes("eat")) {
+}
+else if (input.toLowerCase().includes("money") || input.toLowerCase().includes("earn")) {
+  resultText = `✅ Earn $1,000 per month for the next 6 months and track income weekly`;
+}
+else if (input.toLowerCase().includes("study") || input.toLowerCase().includes("learn")) {
+  resultText = `✅ Study for 1 hour daily and complete 5 lessons per week for 8 weeks`;
+}
+else if (input.toLowerCase().includes("exercise") || input.toLowerCase().includes("fitness")) {
+  resultText = `✅ Exercise 4 times per week for 30 minutes for the next 12 weeks`;
+}
+else {
+  resultText = `✅ Break "${input}" into a weekly measurable target and complete within 30 days`;
+}
+
 
   document.getElementById("result").innerText = resultText;
 
