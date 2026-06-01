@@ -1,5 +1,4 @@
 console.log("JS LOADED ✅");
-
 // MAIN FUNCTION
 function generateGoal(input, timeframe) {function generateGoal(input, timeframe) text = input.toLowerCase();
 
