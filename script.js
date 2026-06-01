@@ -1,9 +1,7 @@
-
 console.log("JS LOADED ✅");
 
 function convertGoal() {
   console.log("Button clicked ✅");
-
 
   var input = document.getElementById("goalInput").value;
   var timeframe = document.getElementById("timeframe").value;
@@ -63,5 +61,6 @@ function displayGoals() {
 }
 
 window.onload = displayGoals;
+
 
 
