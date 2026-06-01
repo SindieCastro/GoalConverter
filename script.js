@@ -30,8 +30,6 @@ function generateGoal(input, timeframe) {
 
   return "✅ Define a measurable KPI for '" + input + "' and track progress weekly for " + timeframe + " days";
 }
-
-
 // SAVE FUNCTION (separate = safer)
 function saveGoal(goal) {
   let goals = JSON.parse(localStorage.getItem("goals")) || [];
