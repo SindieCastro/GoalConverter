@@ -1,36 +1,31 @@
 console.log("JS LOADED ✅");
 
 // MAIN FUNCTION
-function convertGoal() {
-  try {
-    console.log("Button clicked ✅");
+function generateGoal(input, timeframe) {
+  const text = input.toLowerCase();
 
-    const inputElement = document.getElementById("goalInput");
-    const timeframeElement = document.getElementById("timeframe");
-
-    if (!inputElement) {
-      throw new Error("goalInput not found");
-    }
-
-    const input = inputElement.value;
-    const timeframe = timeframeElement ? timeframeElement.value : "30";
-
-    if (!input) {
-      alert("Please enter a goal");
-      return;
-    }
-
-    const resultText = generateGoal(input, timeframe);
-
-    document.getElementById("result").innerText = resultText;
-
-    saveGoal(resultText);
-    displayGoals();
-
-  } catch (error) {
-    console.error("Error:", error);
-    alert("Something broke — check console");
+  if (text.includes("lose weight")) {
+    return `✅ Lose 1–2 pounds per week for ${timeframe} days by exercising 4 times per week and tracking calories daily`;
   }
+
+  if (text.includes("eat")) {
+    return `✅ Limit daily calorie intake to 2,000 calories and track meals daily for ${timeframe} days`;
+  }
+
+  if (text.includes("earn") || text.includes("money")) {
+    return `✅ Earn $1,000 per month for ${timeframe} days by tracking income weekly and completing income-generating tasks daily`;
+  }
+
+  if (text.includes("study") || text.includes("learn")) {
+    return `✅ Study 1 hour daily and complete 5 lessons per week for ${timeframe} days`;
+  }
+
+  if (text.includes("exercise") || text.includes("fitness")) {
+    return `✅ Exercise 4 times per week for 30 minutes for ${timeframe} days`;
+  }
+
+  // fallback (better than before)
+  return `✅ Set a specific weekly target for "${input}" and track progress daily for ${timeframe} days`;
 }
 
 // GOAL GENERATOR (isolated = safer)
