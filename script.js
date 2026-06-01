@@ -1,6 +1,8 @@
 
 function convertGoal() {
-  console.log("Button clicked ✅"); // document.getElementById("goalInput").value;  console.log("Button clicked ✅"); // DEBUG
+  console.log("Button clicked ✅");
+
+  const input = document.getElementById("goalInput").value;
 
   if (!input) {
     alert("Please enter a goal");
