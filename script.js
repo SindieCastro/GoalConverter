@@ -1,6 +1,27 @@
 console.log("JS LOADED ✅");
 // MAIN FUNCTION
 
+function convertGoal() {function convertGoal console.log("Button clicked ✅");
+
+  var inputElement = document.getElementById("goalInput");
+  var timeframeElement = document.getElementById("timeframe");
+
+  var input = inputElement.value;
+  var timeframe = timeframeElement.value;
+
+  if (!input) {
+    alert("Please enter a goal");
+    return;
+  }
+
+  var resultText = generateGoal(input, timeframe);
+
+  document.getElementById("result").innerText = resultText;
+
+  saveGoal(resultText);
+  displayGoals();
+}
+
 function generateGoal(input, timeframe) {
   var text = input.toLowerCase();
 
