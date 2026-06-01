@@ -1,54 +1,30 @@
 console.log("JS LOADED ✅");
 
 // MAIN FUNCTION
-function generateGoal(input, timeframe) {
-  const text = input.toLowerCase();
+
+function generateGoal(input, timeframe) {function generateGoal(input, timeframe) text = input.toLowerCase();
 
   if (text.includes("lose weight")) {
-    return `✅ Lose 1–2 pounds per week for ${timeframe} days by exercising 4 times per week and tracking calories daily`;
+    return `✅ Reduce body weight by 5–10% over ${timeframe} days by maintaining a daily caloric deficit and exercising 4x per week`;
   }
 
   if (text.includes("eat")) {
-    return `✅ Limit daily calorie intake to 2,000 calories and track meals daily for ${timeframe} days`;
+    return `✅ Maintain a consistent daily caloric intake aligned with target goals and log meals daily for ${timeframe} days`;
   }
 
   if (text.includes("earn") || text.includes("money")) {
-    return `✅ Earn $1,000 per month for ${timeframe} days by tracking income weekly and completing income-generating tasks daily`;
+    return `✅ Increase income by 15–25% over ${timeframe} days by completing weekly revenue-generating activities and tracking performance`;
   }
 
   if (text.includes("study") || text.includes("learn")) {
-    return `✅ Study 1 hour daily and complete 5 lessons per week for ${timeframe} days`;
+    return `✅ Complete 3–5 structured learning sessions per week and track progress across ${timeframe} days`;
   }
 
   if (text.includes("exercise") || text.includes("fitness")) {
-    return `✅ Exercise 4 times per week for 30 minutes for ${timeframe} days`;
+    return `✅ Perform 4 structured workouts per week and track performance metrics for ${timeframe} days`;
   }
 
-  // fallback (better than before)
-  return `✅ Set a specific weekly target for "${input}" and track progress daily for ${timeframe} days`;
-}
-
-// GOAL GENERATOR (isolated = safer)
-function generateGoal(input, timeframe) {
-  const text = input.toLowerCase();
-
-  if (text.includes("eat")) {
-    return `✅ Eat no more than 2,000 calories per day for ${timeframe} days and track meals daily`;
-  }
-
-  if (text.includes("money") || text.includes("earn")) {
-    return `✅ Earn $1,000 per month for ${timeframe} days and track income weekly`;
-  }
-
-  if (text.includes("study") || text.includes("learn")) {
-    return `✅ Study 1 hour daily for ${timeframe} days`;
-  }
-
-  if (text.includes("exercise") || text.includes("fitness")) {
-    return `✅ Exercise 4 times per week for ${timeframe} days`;
-  }
-
-  return `✅ Break "${input}" into weekly measurable goals for ${timeframe} days`;
+  return `✅ Define a measurable KPI for "${input}" and track progress weekly over ${timeframe} days`;
 }
 
 // SAVE FUNCTION (separate = safer)
