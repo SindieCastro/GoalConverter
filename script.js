@@ -1,4 +1,4 @@
-console.log("JS LOADED");
+console.log("JS LOADED ✅");
 
 function convert  var input = document.getElementById("goalInput").value;function convertGoal() {
   var timeframe = document.getElementById("timeframe").value;
