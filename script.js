@@ -1,5 +1,9 @@
-console.log("JS LOADED ✅");console.log("JS LOADED ✅Goal() {
+
+console.log("JS LOADED ✅");
+
+function convertGoal() {
   console.log("Button clicked ✅");
+
 
   var input = document.getElementById("goalInput").value;
   var timeframe = document.getElementById("timeframe").value;
