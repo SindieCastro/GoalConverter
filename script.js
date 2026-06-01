@@ -1,7 +1,6 @@
 console.log("JS LOADED ✅");
 
 // MAIN FUNCTION
-
 function generateGoal(input, timeframe) {function generateGoal(input, timeframe) text = input.toLowerCase();
 
   if (text.includes("lose weight")) {
@@ -33,7 +32,6 @@ function saveGoal(goal) {
   goals.push(goal);
   localStorage.setItem("goals", JSON.stringify(goals));
 }
-
 // DISPLAY FUNCTION
 function displayGoals() {
   const list = document.getElementById("savedGoals");
