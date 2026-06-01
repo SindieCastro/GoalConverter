@@ -1,8 +1,9 @@
-console.log("JS LOADED");
+console.log("JS LOADED ✅");
+
 // MAIN FUNCTION
 function convertGoal() {
   try {
-    console.log("Button clicked");
+    console.log("Button clicked ✅");
 
     const inputElement = document.getElementById("goalInput");
     const timeframeElement = document.getElementById("timeframe");
@@ -37,22 +38,22 @@ function generateGoal(input, timeframe) {
   const text = input.toLowerCase();
 
   if (text.includes("eat")) {
-    return `Eat no more than 2,000 calories per day for ${timeframe} days and track meals daily`;
+    return `✅ Eat no more than 2,000 calories per day for ${timeframe} days and track meals daily`;
   }
 
   if (text.includes("money") || text.includes("earn")) {
-    return `Earn $1,000 per month for ${timeframe} days and track income weekly`;
+    return `✅ Earn $1,000 per month for ${timeframe} days and track income weekly`;
   }
 
   if (text.includes("study") || text.includes("learn")) {
-    return `Study 1 hour daily for ${timeframe} days`;
+    return `✅ Study 1 hour daily for ${timeframe} days`;
   }
 
   if (text.includes("exercise") || text.includes("fitness")) {
-    return `Exercise 4 times per week for ${timeframe} days`;
+    return `✅ Exercise 4 times per week for ${timeframe} days`;
   }
 
-  return `Break "${input}" into weekly measurable goals for ${timeframe} days`;
+  return `✅ Break "${input}" into weekly measurable goals for ${timeframe} days`;
 }
 
 // SAVE FUNCTION (separate = safer)
@@ -79,5 +80,3 @@ function displayGoals() {
 }
 
 window.onload = displayGoals;
-
-
