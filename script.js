@@ -1,7 +1,7 @@
-console.log("JS LOADED ✅");
+console.log("JS LOADED");
 
 function convertGoal() {
-  console.log("Button clicked ✅");
+  console.log("Button clicked");
 
   const input = document.getElementById("goalInput").value;
 
@@ -10,7 +10,7 @@ function convertGoal() {
     return;
   }
 
-  const resultText = `✅ ${input} — Track it weekly and complete in 30 days`;
+  const resultText = `${input} — Track it weekly and complete in 30 days`;
 
   document.getElementById("result").innerText = resultText;
 
