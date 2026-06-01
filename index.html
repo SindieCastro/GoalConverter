@@ -1,15 +1,36 @@
 
-<!DOCTYPE html><!DOCTYPE html<head>
-  <title>Goal Converter</title>
+<!DOCTYPE html><!DOCTYPE lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Goal Converter App</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Turn Your Goal into a Measurable Goal</h1>
 
-  <input id="goalInput" placeholder="Enter your goal" />
-  <button onclick="convertGoal()">Convert</button>
+  <div class="container">
+    <h1>🎯 Goal Converter</h1>
 
-  <p id="result"></p>
+    <!-- INPUT SECTION -->
+    <div class="card">
+      <h2>Enter Your Goal</h2>
+      <input id="goalInput" placeholder="e.g. I want to get fit" />
+      <button onclick="convertGoal()">Convert Goal</button>
+    </div>
+
+    <!-- OUTPUT SECTION -->
+    <div class="card">
+      <h2>Measurable Goal</h2>
+      <p id="result">Your transformed goal will appear here...</p>
+    </div>
+
+    <!-- SAVED GOALS -->
+    <div class="card">
+      <h2>Saved Goals</h2>
+      <ul id="savedGoals"></ul>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
+
