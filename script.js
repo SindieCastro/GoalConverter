@@ -19,7 +19,7 @@ function displayGoals() {
 window.onload = displayGoals;
 
 function convertGoal() {
-  console.log("Button clicked ");
+  console.log("Button clicked");
 
   const input = document.getElementById("goalInput").value;
 
