@@ -1,7 +1,6 @@
 console.log("JS LOADED ✅");
 
-function convertGoal() {
-  var input = document.getElementById("goalInput").value;
+function convert  var input = document.getElementById("goalInput").value;function convertGoal() {
   var timeframe = document.getElementById("timeframe").value;
 
   if (!input) {
