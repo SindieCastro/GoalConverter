@@ -23,11 +23,11 @@ function generateGoal(input, timeframe) {
   var text = input.toLowerCase();
 
   if (text.includes("increase")) {
-    return "✅ Increase '" + input + "' by 15–25% over " + timeframe + " days";
+    return "✅ " + input + "' by 15–25% over " + timeframe + " days";
   }
 
   if (text.includes("decrease") || text.includes("reduce")) {
-    return "✅ Reduce '" + input + "' by 10–20% over " + timeframe + " days";
+    return "✅ " + input + "' by 10–20% over " + timeframe + " days";
   }
 
   if (text.includes("weight")) {
