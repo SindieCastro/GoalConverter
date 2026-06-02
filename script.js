@@ -132,7 +132,7 @@ function deleteGoal(index) {
   localStorage.setItem("goals", JSON.stringify(goals));
 
   displayGoals(); // refresh list
-}
+  }
 
 }
 window.onload = displayGoals;
