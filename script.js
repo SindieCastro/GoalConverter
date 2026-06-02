@@ -29,7 +29,11 @@ if (text.includes("increase")) {if (text         " over " + timeframe + " days";
          " within " + timeframe + " days with weekly tracking";
 }
 
-
+if (text.includes("decrease")) {if (text         " over " + timeframe + " days";
+}
+  var cleaned = input.replace("decrease", "").trim();
+  return "✅ Achieve a 10–20% reduction in " + cleaned + " over " + timeframe + " days";
+}
 
  if (text.includes("exercise") || text.includes("fitness")) {
     return "✅ Perform 4 workouts per week for " + timeframe + " days";
@@ -70,5 +74,5 @@ function displayGoals() {
   }
 }
 
-
+window.onload = displayGoals;
 
