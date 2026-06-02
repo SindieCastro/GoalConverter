@@ -94,6 +94,11 @@ function displayGoals() {
 
   var goals = JSON.parse(localStorage.getItem("goals")) || [];
 
+  if (goals.length === 0) {
+    list.innerHTML = "<p>No goals yet</p>";
+    return;
+  }
+
   for (var i = 0; i < goals.length; i++) {
     var li = document.createElement("li");
 
