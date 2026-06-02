@@ -1,31 +1,8 @@
-console.log("JS LOADED ✅");
-
-function convertGoal() {
-  console.log("Button clicked ✅");
-
-  var input = document.getElementById("goalInput").value;
-  var timeframe = document.getElementById("timeframe").value;
-
-  if (!input) {
-    alert("Please enter a goal");
-    return;
-  }
-
-  var resultText = generateGoal(input, timeframe);
-
-  document.getElementById("result").innerText = resultText;
-
-  saveGoal(resultText);
-  displayGoals();
-}
-
 function generateGoal(input, timeframe) {
   var text = input.toLowerCase();
 
- 
-  
-var increaseWords = ["increase", "improve", "grow", "boost", "expand", "raise", "enhance", "maximize", "scale", "optimize"];
-var decreaseWords = ["decrease", "reduce", "lower", "cut", "minimize", "limit", "shrink", "drop"];
+  var increaseWords = ["increase", "improve", "grow", "boost", "expand", "raise", "enhance", "maximize", "scale", "optimize"];
+  var decreaseWords = ["decrease", "reduce", "lower", "cut", "minimize", "limit", "shrink", "drop"];
 
   var isIncrease = false;
   for (var i = 0; i < increaseWords.length; i++) {
@@ -43,6 +20,7 @@ var decreaseWords = ["decrease", "reduce", "lower", "cut", "minimize", "limit", 
     }
   }
 
+  // ✅ Increase
   if (isIncrease) {
     var cleaned = input.toLowerCase();
     for (var i = 0; i < increaseWords.length; i++) {
@@ -54,6 +32,7 @@ var decreaseWords = ["decrease", "reduce", "lower", "cut", "minimize", "limit", 
            " within " + timeframe + " days with weekly tracking";
   }
 
+  // ✅ Decrease
   if (isDecrease) {
     var cleaned = input.toLowerCase();
     for (var i = 0; i < decreaseWords.length; i++) {
@@ -65,18 +44,14 @@ var decreaseWords = ["decrease", "reduce", "lower", "cut", "minimize", "limit", 
            " over " + timeframe + " days";
   }
 
-  return "✅ Define a measurable KPI for '" + input + "' for " + timeframe + " days";
-  }
-
-
- if (text.includes("exercise") || text.includes("fitness")) {
+  // ✅ ALL OTHER CASES MUST BE INSIDE THE FUNCTION
+  if (text.includes("exercise") || text.includes("fitness")) {
     return "✅ Perform 4 workouts per week for " + timeframe + " days";
   }
 
- if (text.includes("study") || text.includes("learn")) {
+  if (text.includes("study") || text.includes("learn")) {
     return "✅ Complete 5 study sessions per week for " + timeframe + " days";
   }
-
 
   if (text.includes("weight")) {
     return "✅ Reduce body weight by 5–10% over " + timeframe + " days";
@@ -86,26 +61,6 @@ var decreaseWords = ["decrease", "reduce", "lower", "cut", "minimize", "limit", 
     return "✅ Increase income by 15–25% over " + timeframe + " days";
   }
 
+  // ✅ Final fallback
   return "✅ Define a measurable KPI for '" + input + "' for " + timeframe + " days";
 }
-
-function saveGoal(goal) {
-  var goals = JSON.parse(localStorage.getItem("goals")) || [];
-  goals.push(goal);
-  localStorage.setItem("goals", JSON.stringify(goals));
-}
-
-function displayGoals() {
-  var list = document.getElementById("savedGoals");
-  list.innerHTML = "";
-
-  var goals = JSON.parse(localStorage.getItem("goals")) || [];
-
-  for (var i = 0; i < goals.length; i++) {
-    var li = document.createElement("li");
-    li.innerText = goals[i];
-    list.appendChild(li);
-  }
-}
-
-window.onload = displayGoals;
