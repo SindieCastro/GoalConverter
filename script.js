@@ -20,7 +20,9 @@ function convertGoal() {
 }
 
 
-function generateGoal(input, timeframe) {function generateGoal "maximize", "scale", "optimize"];
+function generateGoal(input, timeframe) {function generateGoal(input,  var text = input.toLowerCase();
+
+  var increaseWords = ["increase", "improve", "grow", "boost", "expand", "raise", "enhance", "maximize", "scale", "optimize"];
   var decreaseWords = ["decrease", "reduce", "lower", "cut", "minimize", "limit", "shrink", "drop"];
 
   var isIncrease = false;
@@ -39,7 +41,7 @@ function generateGoal(input, timeframe) {function generateGoal "maximize", "scal
     }
   }
 
-  // ✅ INCREASE
+  // ✅ Increase logic
   if (isIncrease) {
     var cleaned = input.toLowerCase();
     for (var i = 0; i < increaseWords.length; i++) {
@@ -51,7 +53,7 @@ function generateGoal(input, timeframe) {function generateGoal "maximize", "scal
            " within " + timeframe + " days";
   }
 
-  // ✅ DECREASE
+  // ✅ Decrease logic
   if (isDecrease) {
     var cleaned = input.toLowerCase();
     for (var i = 0; i < decreaseWords.length; i++) {
@@ -63,7 +65,7 @@ function generateGoal(input, timeframe) {function generateGoal "maximize", "scal
            " over " + timeframe + " days";
   }
 
-  // ✅ ALL OTHER CASES MUST BE HERE
+  // ✅ Other cases (IMPORTANT: inside function)
   if (text.includes("exercise") || text.includes("fitness")) {
     return "✅ Perform 4 workouts per week for " + timeframe + " days";
   }
@@ -80,11 +82,8 @@ function generateGoal(input, timeframe) {function generateGoal "maximize", "scal
     return "✅ Increase income by 15–25% over " + timeframe + " days";
   }
 
-  // ✅ FINAL RETURN (ALWAYS LAST INSIDE FUNCTION)
+  // ✅ Default fallback (must be last inside function)
   return "✅ Define a measurable KPI for '" + input + "' for " + timeframe + " days";
-  }
-
-  var text = input.toLowerCase();
 }
 
 // ✅ SAVE
