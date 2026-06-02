@@ -37,9 +37,12 @@ function generateGoal(input, timeframe) {
       .replace(/reduce/g, "")
       .trim();
 
-    return "✅ Achieve a 10–20% reduction in " + cleaned +
+    
+   return "✅ Achieve a 10–20% reduction in " + cleaned +
            " over " + timeframe + " days";
   }
+
+  
 
 
  if (text.includes("exercise") || text.includes("fitness")) {
