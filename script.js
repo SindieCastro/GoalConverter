@@ -72,17 +72,17 @@ var decreaseWords = ["decrease", "reduce", "lower", "cut", "minimize", "limit", 
  if (text.includes("exercise") || text.includes("fitness")) {
     return "✅ Perform 4 workouts per week for " + timeframe + " days";
   }
-  
- if (text.includes("study") || text.includes("learn")) {
+
+  if (text.includes("study") || text.includes("learn")) {
     return "✅ Complete 5 study sessions per week for " + timeframe + " days";
   }
 
 
- if (text.includes("weight")) {
+  if (text.includes("weight")) {
     return "✅ Reduce body weight by 5–10% over " + timeframe + " days";
   }
 
- if (text.includes("earn") || text.includes("money")) {
+  if (text.includes("earn") || text.includes("money")) {
     return "✅ Increase income by 15–25% over " + timeframe + " days";
   }
 
@@ -95,7 +95,6 @@ function saveGoal(goal) {
   localStorage.setItem("goals", JSON.stringify(goals));
 }
 
-
 function displayGoals() {
   var list = document.getElementById("savedGoals");
   list.innerHTML = "";
@@ -104,22 +103,11 @@ function displayGoals() {
 
   for (var i = 0; i < goals.length; i++) {
     var li = document.createElement("li");
-
-    li.innerText = goals[i] + " ";
-
-    var btn = document.createElement("button");
-    btn.innerText = "❌";
-
-    btn.onclick = (function(index) {
-      return function() {
-        deleteGoal(index);
-      };
-    })(i);
-
-    li.appendChild(btn);
+    li.innerText = goals[i];
     list.appendChild(li);
   }
 }
 
 window.onload = displayGoals;
+
 
