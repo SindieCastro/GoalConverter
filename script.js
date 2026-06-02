@@ -20,7 +20,10 @@ function convertGoal() {
 }
 
 
-function generateGoal(input, timeframe) {function generateGoal(input,  var text = input.toLowerCase();
+
+function generateGoal(input, timeframe) {
+  var text = input.toLowerCase();
+
 
   var increaseWords = ["increase", "improve", "grow", "boost", "expand", "raise", "enhance", "maximize", "scale", "optimize"];
   var decreaseWords = ["decrease", "reduce", "lower", "cut", "minimize", "limit", "shrink", "drop"];
