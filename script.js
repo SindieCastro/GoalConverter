@@ -82,7 +82,7 @@ function generateGoal(input, timeframe) {function generateGoal "maximize", "scal
 
   // ✅ FINAL RETURN (ALWAYS LAST INSIDE FUNCTION)
   return "✅ Define a measurable KPI for '" + input + "' for " + timeframe + " days";
-}
+  }
 
   var text = input.toLowerCase();
 
@@ -92,7 +92,7 @@ function saveGoal(goal) {
   var goals = JSON.parse(localStorage.getItem("goals")) || [];
   goals.push(goal);
   localStorage.setItem("goals", JSON.stringify(goals));
-}
+  }
 
 // ✅ DELETE (moved OUTSIDE ✅)
 function deleteGoal(index) {
@@ -100,7 +100,7 @@ function deleteGoal(index) {
   goals.splice(index, 1);
   localStorage.setItem("goals", JSON.stringify(goals));
   displayGoals();
-}
+  }
 
 // ✅ DISPLAY
 function displayGoals() {
