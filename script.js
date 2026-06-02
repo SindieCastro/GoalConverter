@@ -69,11 +69,11 @@ var decreaseWords = ["decrease", "reduce", "lower", "cut", "minimize", "limit", 
   }
 
 
-  if (text.includes("exercise") || text.includes("fitness")) {
+ if (text.includes("exercise") || text.includes("fitness")) {
     return "✅ Perform 4 workouts per week for " + timeframe + " days";
   }
 
-  if (text.includes("study") || text.includes("learn")) {
+ if (text.includes("study") || text.includes("learn")) {
     return "✅ Complete 5 study sessions per week for " + timeframe + " days";
   }
 
