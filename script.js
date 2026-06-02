@@ -103,9 +103,36 @@ function displayGoals() {
 
   for (var i = 0; i < goals.length; i++) {
     var li = document.createElement("li");
-    li.innerText = goals[i];
+
+    // ✅ Goal text
+    li.innerText = goals[i] + " ";
+
+    // ✅ Create delete button
+    var deleteBtn = document.createElement("button");
+    deleteBtn.innerText = "❌";
+
+    // ✅ Attach delete action
+    deleteBtn.onclick = (function(index) {
+      return function() {
+        deleteGoal(index);
+      };
+    })(i);
+
+    li.appendChild(deleteBtn);
     list.appendChild(li);
   }
 }
+
+
+function deleteGoal(index) {
+  var goals = JSON.parse(localStorage.getItem("goals")) || [];
+
+  goals.splice(index, 1); // remove selected goal
+
+  localStorage.setItem("goals", JSON.stringify(goals));
+
+  displayGoals(); // refresh list
+}
+
 
 window.onload = displayGoals;
