@@ -125,5 +125,13 @@ function deleteGoal(index) {
 }
 
 
+function clearGoals() {
+  if (confirm("Are you sure you want to delete all goals?")) {
+    localStorage.removeItem("goals");
+    displayGoals();
+  }
+}
+
+
 
 window.onload = displayGoals;
