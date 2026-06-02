@@ -85,7 +85,7 @@ function generateGoal(input, timeframe) {function generateGoal "maximize", "scal
   }
 
   var text = input.toLowerCase();
-
+}
 
 // ✅ SAVE
 function saveGoal(goal) {
