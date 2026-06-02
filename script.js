@@ -119,10 +119,6 @@ function displayGoals() {
     li.appendChild(btn);
     list.appendChild(li);
   }
-
-
-
-
 }
 
 window.onload = displayGoals;
