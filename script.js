@@ -30,12 +30,9 @@ if (text.includes("increase")) {if (text         " over " + timeframe + " days";
 }
 
 
-if (text.includes("decrease") || text.includes("reduce")) {
- 
-  var cleaned = inputvar cleaned = .toLowerCase()
-    .replace(/reduce/g, "")
-    .replace(/decrease/g, "")
-    .trim();
+if (text.includes("decrease")) {if (text         " over " + timeframe + " days";
+}
+  var cleaned = input.replace("decrease", "").trim();
 
 
   return "✅ Achieve a 10–20% reduction in " + cleaned + " over " + timeframe + " days";
