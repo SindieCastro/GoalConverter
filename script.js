@@ -48,9 +48,10 @@ function generateGoal(input, timeframe) {function generateGoal(input,  var text 
       cleaned = cleaned.replace(increaseWords[i], "");
     }
     cleaned = cleaned.trim();
-
     return "✅ Achieve a 15–25% improvement in " + cleaned +
-           " within " + timeframe + " days";
+           " within " + timeframe + " days with weekly tracking";
+
+
   }
 
   // ✅ Decrease logic
@@ -60,9 +61,9 @@ function generateGoal(input, timeframe) {function generateGoal(input,  var text 
       cleaned = cleaned.replace(decreaseWords[i], "");
     }
     cleaned = cleaned.trim();
-
     return "✅ Achieve a 10–20% reduction in " + cleaned +
-           " over " + timeframe + " days";
+           " over " + timeframe + " days"
+
   }
 
   // ✅ Other cases (IMPORTANT: inside function)
