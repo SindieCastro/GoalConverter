@@ -23,26 +23,50 @@ function generateGoal(input, timeframe) {
   var text = input.toLowerCase();
 
  
-  // ✅ INCREASE
-  if (text.includes("increase")) {
-    var cleaned = input.toLowerCase().replace(/increase/g, "").trim();
+  
+var increaseWords = ["increase", "improve", "grow", "boost", "expand", "raise", "enhance", "maximize", "scale", "optimize"];
+var decreaseWords = ["decrease", "reduce", "lower", "cut", "minimize", "limit", "shrink", "drop"];
+
+  var isIncrease = false;
+  for (var i = 0; i < increaseWords.length; i++) {
+    if (text.includes(increaseWords[i])) {
+      isIncrease = true;
+      break;
+    }
+  }
+
+  var isDecrease = false;
+  for (var i = 0; i < decreaseWords.length; i++) {
+    if (text.includes(decreaseWords[i])) {
+      isDecrease = true;
+      break;
+    }
+  }
+
+  if (isIncrease) {
+    var cleaned = input.toLowerCase();
+    for (var i = 0; i < increaseWords.length; i++) {
+      cleaned = cleaned.replace(increaseWords[i], "");
+    }
+    cleaned = cleaned.trim();
+
     return "✅ Achieve a 15–25% improvement in " + cleaned +
            " within " + timeframe + " days with weekly tracking";
   }
 
-  // ✅ DECREASE / REDUCE
-  if (text.includes("decrease") || text.includes("reduce")) {
-    var cleaned = input.toLowerCase()
-      .replace(/decrease/g, "")
-      .replace(/reduce/g, "")
-      .trim();
+  if (isDecrease) {
+    var cleaned = input.toLowerCase();
+    for (var i = 0; i < decreaseWords.length; i++) {
+      cleaned = cleaned.replace(decreaseWords[i], "");
+    }
+    cleaned = cleaned.trim();
 
-    
-   return "✅ Achieve a 10–20% reduction in " + cleaned +
+    return "✅ Achieve a 10–20% reduction in " + cleaned +
            " over " + timeframe + " days";
   }
 
-  
+  return "✅ Define a measurable KPI for '" + input + "' for " + timeframe + " days";
+  }
 
 
  if (text.includes("exercise") || text.includes("fitness")) {
