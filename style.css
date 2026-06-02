@@ -58,3 +58,33 @@ li button:hover {
 
   background: red;
 
+
+/* ✅ Goal card style *//* ✅ Goal */
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: white;
+  font-size: 14px;
+}
+
+/* ✅ Delete button styling */
+#savedGoals li button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#savedGoals li button:hover {
+  background: darkred;
+}
+``
+#savedGoals li {
+  margin-top: 12px;
+  padding: 14px;
+
