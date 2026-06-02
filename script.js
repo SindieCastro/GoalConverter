@@ -22,18 +22,25 @@ function convertGoal() {
 function generateGoal(input, timeframe) {
   var text = input.toLowerCase();
 
-  if (text.includes("increase")) {if (text         " over " + timeframe + " days";
-  }
-    var cleaned = input.replace("increase", "").trim();
+ 
+  // ✅ INCREASE
+  if (text.includes("increase")) {
+    var cleaned = input.toLowerCase().replace(/increase/g, "").trim();
     return "✅ Achieve a 15–25% improvement in " + cleaned +
            " within " + timeframe + " days with weekly tracking";
   }
-  
-  if (text.includes("decrease")) {if (text         " over " + timeframe + " days";
+
+  // ✅ DECREASE / REDUCE
+  if (text.includes("decrease") || text.includes("reduce")) {
+    var cleaned = input.toLowerCase()
+      .replace(/decrease/g, "")
+      .replace(/reduce/g, "")
+      .trim();
+
+    return "✅ Achieve a 10–20% reduction in " + cleaned +
+           " over " + timeframe + " days";
   }
-    var cleaned = input.replace("decrease", "").trim();
-    return "✅ Achieve a 10–20% reduction in " + cleaned + " over " + timeframe + " days";
-  }
+
 
  if (text.includes("exercise") || text.includes("fitness")) {
     return "✅ Perform 4 workouts per week for " + timeframe + " days";
