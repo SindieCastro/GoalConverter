@@ -119,7 +119,7 @@ function displayGoals() {
     li.appendChild(btn);
     list.appendChild(li);
   }
-}
+
 
 
 function deleteGoal(index) {
@@ -131,7 +131,7 @@ function deleteGoal(index) {
 
   displayGoals();
 }
-
+}
 
 window.onload = displayGoals;
 
