@@ -121,7 +121,7 @@ function displayGoals() {
     li.appendChild(deleteBtn);
     list.appendChild(li);
   }
-}
+
 
 
 function deleteGoal(index) {
@@ -134,5 +134,5 @@ function deleteGoal(index) {
   displayGoals(); // refresh list
 }
 
-
+}
 window.onload = displayGoals;
