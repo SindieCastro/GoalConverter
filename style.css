@@ -46,20 +46,29 @@ select {
 
 
 
+#savedGoals {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-/* ✅ Goal card style *//* ✅ Goal */
+/* ✅ Goal cards */
+#savedGoals li {
+  margin-top: 12px;
+  padding: 14px;
+  background: #1e293b;
   border-radius: 10px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  color: white;
-  font-size: 14px;
+  width: 100%;
 }
 
 /* ✅ Delete button */
 #savedGoals li button {
+  margin-left: 10px;
   background: red;
   color: white;
   border: none;
@@ -71,19 +80,4 @@ select {
 #savedGoals li button:hover {
   background: darkred;
 }
-
-#savedGoals {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* ✅ Goal card style */
-#savedGoals li {
-  margin-top: 12px;
-  padding: 14px;
-
-#savedGoals li {
-  margin-top: 12px;
-  padding: 14px;
 
