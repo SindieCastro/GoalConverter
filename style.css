@@ -58,7 +58,7 @@ select {
   font-size: 14px;
 }
 
-/* ✅ Delete button styling */
+/* ✅ Delete button */
 #savedGoals li button {
   background: red;
   color: white;
@@ -71,7 +71,18 @@ select {
 #savedGoals li button:hover {
   background: darkred;
 }
-``
+
+#savedGoals {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* ✅ Goal card style */
+#savedGoals li {
+  margin-top: 12px;
+  padding: 14px;
+
 #savedGoals li {
   margin-top: 12px;
   padding: 14px;
