@@ -22,14 +22,17 @@ function convertGoal() {
 function generateGoal(input, timeframe) {
   var text = input.toLowerCase();
 
-  if (text.includes("increase")) {
-    return "✅ " + input + " by 15–25% within " + timeframe + " days using weekly performance tracking";
-  }
-
- 
-if (text.includes("decrease") || text.includes("reduce")) {
-  return "✅ Reduce " + input + " by 10–20% over " + timeframe + " days";
+if (text.includes("increase")) {if (text         " over " + timeframe + " days";
 }
+  var cleaned = input.replace("increase", "").trim();
+  return "✅ Achieve a 15–25% improvement in " + cleaned +
+         " within " + timeframe + " days with weekly tracking";
+}
+
+if (text.includes("decrease") || text.includes("reduce")) {
+  var cleaned = input.replace("decrease", "").replace("reduce", "").trim();
+  return "✅ Achieve a 10–20% reduction in " + cleaned +
+
 
   
  if (text.includes("exercise") || text.includes("fitness")) {
