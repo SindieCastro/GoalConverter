@@ -36,7 +36,7 @@ if (text.includes("decrease") || text.includes("reduce")) {
     .replace(/reduce/g, "")
     .replace(/decrease/g, "")
     .trim();
-}
+
 
   return "✅ Achieve a 10–20% reduction in " + cleaned + " over " + timeframe + " days";
 }
