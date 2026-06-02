@@ -112,7 +112,10 @@ function displayGoals() {
     list.appendChild(li);
   }
 }
-function deleteGoal(index) {function deleteGoal  var goals = JSON.parse(localStorage.getItem("goals")) || [];
+
+// ✅ OUTSIDE displayGoals
+function deleteGoal(index) {
+  var goals = JSON.parse(localStorage.getItem("goals")) || [];
 
   goals.splice(index, 1);
 
@@ -120,6 +123,7 @@ function deleteGoal(index) {function deleteGoal  var goals = JSON.parse(localSto
 
   displayGoals();
 }
+
 
 
 window.onload = displayGoals;
