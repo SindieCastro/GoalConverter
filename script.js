@@ -33,7 +33,7 @@ if (text.includes("decrease") || text.includes("reduce")) {
   var cleaned = input.replace("decrease", "").replace("reduce", "").trim();
   return "✅ Achieve a 10–20% reduction in " + cleaned +
 
-
+}
   
  if (text.includes("exercise") || text.includes("fitness")) {
     return "✅ Perform 4 workouts per week for " + timeframe + " days";
