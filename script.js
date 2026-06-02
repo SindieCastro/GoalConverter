@@ -41,7 +41,6 @@ function generateGoal(input, timeframe) {
     }
   }
 
-  // ✅ Increase
   if (isIncrease) {
     var cleaned = input.toLowerCase();
     for (var i = 0; i < increaseWords.length; i++) {
@@ -50,10 +49,9 @@ function generateGoal(input, timeframe) {
     cleaned = cleaned.trim();
 
     return "✅ Achieve a 15–25% improvement in " + cleaned +
-           " within " + timeframe + " days with weekly tracking";
+           " within " + timeframe + " days";
   }
 
-  // ✅ Decrease
   if (isDecrease) {
     var cleaned = input.toLowerCase();
     for (var i = 0; i < decreaseWords.length; i++) {
@@ -65,7 +63,6 @@ function generateGoal(input, timeframe) {
            " over " + timeframe + " days";
   }
 
-  // ✅ ALL OTHER CASES MUST BE INSIDE THE FUNCTION
   if (text.includes("exercise") || text.includes("fitness")) {
     return "✅ Perform 4 workouts per week for " + timeframe + " days";
   }
@@ -82,9 +79,9 @@ function generateGoal(input, timeframe) {
     return "✅ Increase income by 15–25% over " + timeframe + " days";
   }
 
-  // ✅ Final fallback
   return "✅ Define a measurable KPI for '" + input + "' for " + timeframe + " days";
 }
+
 function saveGoal(goal) {
   var goals = JSON.parse(localStorage.getItem("goals")) || [];
   goals.push(goal);
