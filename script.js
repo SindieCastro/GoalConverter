@@ -96,9 +96,22 @@ function displayGoals() {
 
   for (var i = 0; i < goals.length; i++) {
     var li = document.createElement("li");
-    li.innerText = goals[i];
+
+    li.innerText = goals[i] + " ";
+
+    var btn = document.createElement("button");
+    btn.innerText = "❌";
+
+    btn.onclick = (function(index) {
+      return function() {
+        deleteGoal(index);
+      };
+    })(i);
+
+    li.appendChild(btn);
     list.appendChild(li);
   }
 }
+
 
 window.onload = displayGoals;
