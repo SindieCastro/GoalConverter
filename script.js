@@ -122,15 +122,7 @@ function displayGoals() {
 
 
 
-function deleteGoal(index) {
-  var goals = JSON.parse(localStorage.getItem("goals")) || [];
 
-  goals.splice(index, 1);
-
-  localStorage.setItem("goals", JSON.stringify(goals));
-
-  displayGoals();
-}
 }
 
 window.onload = displayGoals;
