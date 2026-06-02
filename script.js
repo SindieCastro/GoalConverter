@@ -23,7 +23,7 @@ function generateGoal(input, timeframe) {
   var text = input.toLowerCase();
 
   if (text.includes("increase")) {
-    return "✅ Increase " + input + " by 15–25% within " + timeframe + " days using weekly performance tracking";
+    return "✅ " + input + " by 15–25% within " + timeframe + " days using weekly performance tracking";
   }
 
  
